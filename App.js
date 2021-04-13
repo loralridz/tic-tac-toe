@@ -2,77 +2,131 @@ import React, { useState } from "react";
 import { Pressable, StyleSheet, Text, View, Button } from "react-native";
 import "./assets/App.css";
 const App = () => {
-  const [timesPressed, setTimesPressed] = useState(0);
-
-  let textLog = "";
-  if (timesPressed > 1) {
-    textLog = timesPressed + "x onPress";
-  } else if (timesPressed > 0) {
-    textLog = "onPress";
-  }
-
   return (
     <View style={styles.container}>
-      {/* <Pressable
-        onPress={() => {
-          setTimesPressed((current) => current + 1);
-        }}
-        style={({ pressed }) => [
-          {
-            backgroundColor: pressed
-              ? 'rgb(210, 230, 255)'
-              : 'white'
-          },
-          styles.wrapperCustom
-        ]}>
-        {({ pressed }) => (
-          <Text style={styles.text}>
-            {pressed ? 'Pressed!' : 'Press Me'}
-          </Text>
-        )}
-      </Pressable>
-      <View style={styles.logBox}>
-        <Text testID="pressable_press_console">{textLog}</Text>    </View> */}
-      {/* <h1 style={{color:"salmon"}}>Number Guessing Game</h1> */}
-      {/* <Header fullname="Noor Rida" /> */}
-      {/* <Text style={{ fontSize: 50 }}>Number: {getText}</Text> */}
-      {/* <View style={{ flexDirection: "row", padding: "3rem" }}> */}
-      {/* <Button title="Clear"  onPress={()=>setText(0)} />
-         <Button title="Reset" onPress={()=>setText("")} /> */}
-      {/* </View> */}
       <Text style={styles.playerText}>Player 1 : X</Text>
       <View style={styles.board}>
         <View style={styles.row}>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
           <View style={styles.button}>
-            <button title="" />
+            <Pressable
+              onPress={() => {
+                console.log("Clicked");
+              }}
+              style={({ pressed }) => [
+                {
+                  backgroundColor: pressed ? "pink" : "white"
+                },
+                styles.wrapperButton
+              ]}
+            />
           </View>
         </View>
       </View>
@@ -108,6 +162,12 @@ const styles = StyleSheet.create({
     padding: "3rem",
     fontSize: "26px",
     fontFamily: "monospace"
+  },
+  wrapperButton: {
+    width: "200px",
+    height: "200px",
+    backgroundColor: "transparent",
+    cursor: "pointer"
   }
 });
 
