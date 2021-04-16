@@ -24,17 +24,6 @@ const App = () => {
       <View style={styles.board}>
         <View style={styles.row}>
           <View style={styles.button}>
-            {/* <Pressable
-              onPress={() => handlePress(0)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              <Text>{buttonValue[0]}</Text>
-            </Pressable> */}
             <PressableButton
               btnStyle={styles.button}
               btnValue={buttonValue}
@@ -45,125 +34,94 @@ const App = () => {
             />
           </View>
           <View style={styles.button}>
-            <Pressable
-              // onPress={() => {
-              //   if (buttonValue.b !== "") return;
-              //   currentUser
-              //     ? setButtonValue({ ...buttonValue, b: "X" })
-              //     : setButtonValue({ ...buttonValue, b: "O" });
-              //   setCurrentUser(!currentUser);
-              // }}
-              onPress={() => handlePress(1)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[1]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={1}
+            />
           </View>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(2)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[2]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={2}
+            />
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(3)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[3]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={3}
+            />
           </View>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(4)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[4]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={4}
+            />
           </View>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(5)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[5]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={5}
+            />
           </View>
         </View>
         <View style={styles.row}>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(6)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[6]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={6}
+            />
           </View>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(7)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[7]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={7}
+            />
           </View>
           <View style={styles.button}>
-            <Pressable
-              onPress={() => handlePress(8)}
-              style={({ pressed }) => [
-                {
-                  backgroundColor: pressed ? "pink" : "white"
-                },
-                styles.wrapperButton
-              ]}
-            >
-              {buttonValue[8]}
-            </Pressable>
+            <PressableButton
+              btnStyle={styles.button}
+              btnValue={buttonValue}
+              handlePress={handlePress}
+              textStyle={styles.textStyle}
+              wrapperStyle={styles.wrapperButton}
+              index={8}
+            />
           </View>
         </View>
       </View>
 
       <Text style={styles.playerText}>Player 2 : O</Text>
-      <Text style={styles.winner}>Winner: {winner}</Text>
+      {winner ? <Text style={styles.winner}>Winner: {winner}</Text> : ""}
     </View>
   );
 };
@@ -206,6 +164,9 @@ const styles = StyleSheet.create({
     textAlign: "center",
     justifyContent: "center",
     margin: "auto"
+  },
+  winner: {
+    fontSize: "3rem"
   }
 });
 
